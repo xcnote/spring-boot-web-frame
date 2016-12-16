@@ -2,12 +2,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	
-	<groupId>com.it</groupId>
-	<artifactId>it-audit</artifactId>
+	<groupId>com.system</groupId>
+	<artifactId>spring-boot-web-framework</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	
-	<name>it-audit</name>
+	<name>spring-boot-web-framework</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -234,7 +234,7 @@
 			<properties>
 				<!-- mysql -->
 				<jdbc.driverclass>com.mysql.jdbc.Driver</jdbc.driverclass>
-				<jdbc.url><![CDATA[jdbc:mysql://120.92.51.193:3306/it_audit?useUnicode\=true&characterEncoding\=utf8&characterSetResults\=utf8&useSSL=false]]></jdbc.url>
+				<jdbc.url><![CDATA[jdbc:mysql://120.92.51.193:3306/default?useUnicode\=true&characterEncoding\=utf8&characterSetResults\=utf8&useSSL=false]]></jdbc.url>
 				<jdbc.username>it_audit</jdbc.username>
 				<jdbc.password><![CDATA[123456]]></jdbc.password>
 			</properties>
@@ -245,7 +245,7 @@
 			<properties>
 				<!-- mysql -->
 				<jdbc.driverclass>com.mysql.jdbc.Driver</jdbc.driverclass>
-				<jdbc.url><![CDATA[jdbc:mysql://120.92.51.193:3306/it_audit?useUnicode\=true&characterEncoding\=utf8&characterSetResults\=utf8&useSSL=false]]></jdbc.url>
+				<jdbc.url><![CDATA[jdbc:mysql://120.92.51.193:3306/default?useUnicode\=true&characterEncoding\=utf8&characterSetResults\=utf8&useSSL=false]]></jdbc.url>
 				<jdbc.username>it_audit</jdbc.username>
 				<jdbc.password><![CDATA[123456]]></jdbc.password>
 			</properties>
