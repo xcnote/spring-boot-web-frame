@@ -1,0 +1,33 @@
+<!DOCTYPE xml> 
+
+<configuration debug="false">
+    <!--contextName></contextName-->
+
+    <property scope="context" name="nodeId" value="content-negotiation" />
+
+    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+        <resetJUL>true</resetJUL>
+    </contextListener>
+
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log_dir}/it_audit.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-4relative [%thread] %-3level %logger{26} - %marker %msg%n</pattern>
+        </encoder>
+    </appender>
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">  
+    <encoder>  
+      <pattern>%-4relative [%thread] %-5level %logger{35} - %msg %n</pattern>  
+    </encoder>  
+  </appender> 
+    
+
+    <root level="INFO">
+        <appender-ref ref="stdout" />
+        <appender-ref ref="file" />
+
+    </root>
+</configuration>
