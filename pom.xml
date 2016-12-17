@@ -235,7 +235,7 @@
 				<!-- mysql -->
 				<jdbc.driverclass>com.mysql.jdbc.Driver</jdbc.driverclass>
 				<jdbc.url><![CDATA[jdbc:mysql://120.92.51.193:3306/default?useUnicode\=true&characterEncoding\=utf8&characterSetResults\=utf8&useSSL=false]]></jdbc.url>
-				<jdbc.username>it_audit</jdbc.username>
+				<jdbc.username>default</jdbc.username>
 				<jdbc.password><![CDATA[123456]]></jdbc.password>
 			</properties>
 		</profile>
@@ -246,7 +246,7 @@
 				<!-- mysql -->
 				<jdbc.driverclass>com.mysql.jdbc.Driver</jdbc.driverclass>
 				<jdbc.url><![CDATA[jdbc:mysql://120.92.51.193:3306/default?useUnicode\=true&characterEncoding\=utf8&characterSetResults\=utf8&useSSL=false]]></jdbc.url>
-				<jdbc.username>it_audit</jdbc.username>
+				<jdbc.username>default</jdbc.username>
 				<jdbc.password><![CDATA[123456]]></jdbc.password>
 			</properties>
 		</profile>

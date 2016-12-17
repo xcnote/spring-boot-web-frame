@@ -5,6 +5,9 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
+
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,15 +15,12 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import com.system.auth.AuthContextHolder;
+import com.system.common.CommonInfo;
 import com.system.domain.SystemUser;
 import com.system.enums.UserStatus;
 import com.system.exception.NotLoginException;
 import com.system.exception.UserDisableException;
 import com.system.service.UserService;
-import com.system.util.CommonUtil;
-
-import lombok.Setter;
-import lombok.extern.slf4j.Slf4j;
 
 @Component
 @Slf4j
@@ -56,7 +56,7 @@ public class SystemCookieInterceptor extends HandlerInterceptorAdapter {
 		String token = null;
 		if (cookies != null) {
 			for (Cookie cookie : cookies) {
-				if(cookie.getName().equals(CommonUtil.USER_COOKIE_KEY)){
+				if(cookie.getName().equals(CommonInfo.USER_COOKIE_KEY)){
 					token = cookie.getValue();
 				};
 			}

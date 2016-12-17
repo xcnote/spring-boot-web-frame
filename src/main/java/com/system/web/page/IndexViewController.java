@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.system.common.CommonInfo;
 import com.system.service.UserService;
-import com.system.util.CommonUtil;
 import com.system.web.constants.RequestURI;
 import com.system.web.dao.LoginInfo;
 
@@ -30,7 +30,7 @@ public class IndexViewController {
 	public ModelAndView loginForUser(HttpServletResponse response, LoginInfo loginInfo){
 		String userCookie = this.userService.userLogin(loginInfo.getUsername(), loginInfo.getPassword());
 		if(StringUtils.isNotBlank(userCookie)){
-			response.addCookie(new Cookie(CommonUtil.USER_COOKIE_KEY, userCookie));
+			response.addCookie(new Cookie(CommonInfo.USER_COOKIE_KEY, userCookie));
 		} else {
 			return buildErrorLoginPage("用户名或密码不正确");
 		}
