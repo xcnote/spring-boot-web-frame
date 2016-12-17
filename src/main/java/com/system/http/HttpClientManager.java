@@ -14,7 +14,7 @@ public class HttpClientManager {
 	@Value("${httpclient.proxyHost}")
 	private String proxyHost;
 	@Value("${httpclient.proxyPort}")
-	private int proxyPort;
+	private Integer proxyPort;
 	@Value("${httpclient.maxConnections}")
 	private int maxConnections;
 	@Value("${httpclient.socketTimeOut}")

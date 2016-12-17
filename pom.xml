@@ -232,6 +232,9 @@
 		<profile>
 			<id>online</id>
 			<properties>
+				<httpclient.proxyHost></httpclient.proxyHost>
+			    <httpclient.proxyPort></httpclient.proxyPort>
+			
 				<!-- mysql -->
 				<jdbc.driverclass>com.mysql.jdbc.Driver</jdbc.driverclass>
 				<jdbc.url><![CDATA[jdbc:mysql://120.92.51.193:3306/default?useUnicode\=true&characterEncoding\=utf8&characterSetResults\=utf8&useSSL=false]]></jdbc.url>
@@ -243,6 +246,9 @@
 		<profile>
 			<id>develop</id>
 			<properties>
+				<httpclient.proxyHost></httpclient.proxyHost>
+			    <httpclient.proxyPort></httpclient.proxyPort>
+			
 				<!-- mysql -->
 				<jdbc.driverclass>com.mysql.jdbc.Driver</jdbc.driverclass>
 				<jdbc.url><![CDATA[jdbc:mysql://120.92.51.193:3306/default?useUnicode\=true&characterEncoding\=utf8&characterSetResults\=utf8&useSSL=false]]></jdbc.url>

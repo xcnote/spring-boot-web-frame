@@ -126,6 +126,7 @@ public class SystemWebConfig extends WebMvcConfigurerAdapter{
 	@Override
     public final void configureHandlerExceptionResolvers(final List<HandlerExceptionResolver> exceptionResolvers) {
 		exceptionResolvers.add(this.annotationExceptionHandlerExceptionResolver());
+		exceptionResolvers.add(this.systemExceptionResolver());
 		exceptionResolvers.add(this.restExceptionResolver());
 	}
 	@Bean(name = "exceptionHandlerExceptionResolver")
@@ -138,6 +139,12 @@ public class SystemWebConfig extends WebMvcConfigurerAdapter{
     public RestExceptionHandler restExceptionResolver() {
         final RestExceptionHandler bean = new RestExceptionHandler();
         bean.setOrder(100);
+        return bean;
+    }
+	@Bean(name = "systemExceptionResolver")
+    public SystemExceptionHandler systemExceptionResolver() {
+        final SystemExceptionHandler bean = new SystemExceptionHandler();
+        bean.setOrder(99);
         return bean;
     }
 	
