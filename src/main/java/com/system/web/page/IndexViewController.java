@@ -45,7 +45,4 @@ public class IndexViewController {
 	public static final ModelAndView buildErrorLoginPage(String error){
 		return new ModelAndView("login", "error", error);
 	}
-	public static final ModelAndView buildDefaultErrorPage(String error){
-		return new ModelAndView("error", "info", error);
-	}
 }
