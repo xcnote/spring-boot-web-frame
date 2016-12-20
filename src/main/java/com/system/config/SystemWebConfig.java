@@ -4,10 +4,7 @@ import java.util.List;
 
 import javax.servlet.Filter;
 
-import lombok.extern.slf4j.Slf4j;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
 import org.springframework.boot.context.embedded.ErrorPage;
@@ -27,6 +24,8 @@ import com.system.auth.interceptor.SystemUserAuthInterceptor;
 import com.system.filter.SystemFilter;
 import com.system.web.constants.RequestURI;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Configuration
 @ComponentScan(basePackages = { "com.system" })
 @EnableTransactionManagement
@@ -37,8 +36,6 @@ public class SystemWebConfig extends WebMvcConfigurerAdapter{
 	private SystemCookieInterceptor systemCookieInterceptor;
 	@Autowired
 	private SystemUserAuthInterceptor systemUserAuthInterceptor;
-	@Autowired
-	private ServerProperties properties;
 //	
 //	public static Class<?>[] getRootConfigClasses() {
 //		return new Class<?>[] {
