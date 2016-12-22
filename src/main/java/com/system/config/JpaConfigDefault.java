@@ -27,7 +27,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Import(PropertyConfig.class)
 @Configuration
 @EnableJpaRepositories(entityManagerFactoryRef = "defaultEntityManagerFactory", 
-						transactionManagerRef = DataSourceConfig.DATASOUCE_DEFAULT, 
+						transactionManagerRef = "defaultTransactionManager", 
 						 value = { "com.system.persistence.dao" })
 @Slf4j
 @EnableTransactionManagement
